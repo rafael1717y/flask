@@ -1,5 +1,4 @@
 # Importando a variável app definida dentro pacote app
-from turtle import title
 from flask import render_template
 from app import app
 
@@ -9,4 +8,14 @@ from app import app
 @app.route('/index')
 def index():
     user = {'username': 'Rafael'}
-    return render_template('index.html', title='Home', user=user)
+    posts = [
+        {
+            'author':{'username': 'John'},
+            'body': 'Um belo dia!', 
+        },
+        {
+            'author': {'username':'Sissi'}, 
+            'body': 'Nada aqui!'
+        },        
+    ]
+    return render_template('index.html', title='Home', user=user, posts=posts)
