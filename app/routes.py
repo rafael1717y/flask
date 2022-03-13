@@ -1,4 +1,5 @@
 # Importando a variável app definida dentro pacote app
+from datetime import datetime
 from flask import flash, redirect, render_template, request, url_for
 from werkzeug.urls import url_parse
 from flask_login import current_user, login_required, login_user, logout_user, login_required
@@ -6,7 +7,15 @@ from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from app.models import User
 
+
 # Decorator para associação do '/' e '/index' com a função
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()
+
+
 @app.route('/')
 @app.route('/index')
 @login_required   #disponível só para usuários logados
@@ -62,6 +71,24 @@ def register():
         flash('Congratulations, you are now a register user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = [
+        {'author':user, 'body': 'Test post #1'},
+        {'author':user, 'body': 'Test post #2'},
+    ]
+    return render_template('user.html', user=user, posts=posts)
+
+
+
+
+
+
+
 
 
 
