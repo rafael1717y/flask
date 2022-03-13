@@ -14,4 +14,4 @@ login.login_view = 'login'
 
 
 # esse import deve estar aqui (circular dependence)
-from app import routes, models
+from app import routes, models, errors
