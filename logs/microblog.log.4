@@ -1,0 +1,133 @@
+2022-03-14 09:18:55,023 ERROR: Exception on /explore [GET] [in C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\rafae\Desktop\code\flask\app\routes.py", line 51, in explore
+    return render_template('index.html', title='Explore', posts=posts.items,
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 19, in block 'content'
+    {% include '_post.html' %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2022-03-14 09:19:23,976 ERROR: Exception on /explore [GET] [in C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\rafae\Desktop\code\flask\app\routes.py", line 51, in explore
+    return render_template('index.html', title='Explore', posts=posts.items,
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 19, in block 'content'
+    {% include '_post.html' %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2022-03-14 09:19:25,619 ERROR: Exception on /explore [GET] [in C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\rafae\Desktop\code\flask\app\routes.py", line 51, in explore
+    return render_template('index.html', title='Explore', posts=posts.items,
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 19, in block 'content'
+    {% include '_post.html' %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2022-03-14 09:19:26,404 ERROR: Exception on /explore [GET] [in C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\rafae\Desktop\code\flask\app\routes.py", line 51, in explore
+    return render_template('index.html', title='Explore', posts=posts.items,
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\index.html", line 19, in block 'content'
+    {% include '_post.html' %}
+  File "C:\Users\rafae\Desktop\code\flask\app\templates\_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+  File "C:\Users\rafae\Desktop\code\flask\env\lib\site-packages\jinja2\utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2022-03-14 09:21:23,141 INFO: Microblog startup [in C:\Users\rafae\Desktop\code\flask\app\__init__.py:45]
